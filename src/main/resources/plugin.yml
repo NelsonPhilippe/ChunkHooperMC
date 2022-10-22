@@ -1,0 +1,5 @@
+name: ChunkHooper
+version: '${version}'
+main: fr.oceanquest.chunkhooper.ChunkHooper
+api-version: 1.16
+authors: [ XiliTra ]
