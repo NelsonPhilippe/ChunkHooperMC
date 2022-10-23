@@ -10,11 +10,14 @@ import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.Map;
 
 public final class ChunkHooper extends JavaPlugin {
 
     private static ChunkHooper instance;
+    public static Map<Integer, fr.oceanquest.chunkhooper.data.ChunkHooper> chunkHooperMap = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -57,8 +60,6 @@ public final class ChunkHooper extends JavaPlugin {
         recipe.setIngredient('A', Material.AIR);
         recipe.setIngredient('B', new RecipeChoice.ExactChoice(new ItemStack( Material.IRON_BLOCK, 64)));
         recipe.setIngredient('C', Material.CHEST);
-
-
 
         ChunkHooper.getInstance().getServer().addRecipe(recipe);
     }
